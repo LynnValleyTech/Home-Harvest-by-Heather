@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home & Harvest by Heather | Vancouver Home Staging & Design</title>
+    <title>Home & Harvest by Heather | Vancouver Garden Design & Landscaping</title>
     <style>
         /* Global Styles */
         :root {
-            --primary: #6B8E23; /* Olive green */
-            --secondary: #D2B48C; /* Tan */
-            --accent: #8B4513; /* Saddle brown */
-            --light: #F5F5F5;
-            --dark: #333;
+            --primary: #4a7c59; /* Sage green */
+            --secondary: #d4a373; /* Warm tan */
+            --accent: #3a5a40; /* Forest green */
+            --light: #f8f9fa;
+            --dark: #212529;
         }
         
         body {
-            font-family: 'Lato', Arial, sans-serif;
+            font-family: 'Lora', Georgia, serif;
             margin: 0;
             padding: 0;
             color: var(--dark);
@@ -49,6 +49,7 @@
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
+            font-family: 'Playfair Display', serif;
         }
         
         .logo span {
@@ -77,7 +78,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80') no-repeat center center/cover;
             height: 80vh;
             display: flex;
             align-items: center;
@@ -94,6 +95,7 @@
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
         }
         
         .hero p {
@@ -109,11 +111,14 @@
             text-decoration: none;
             border-radius: 30px;
             font-weight: 600;
-            transition: background 0.3s;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
         }
         
         .btn:hover {
-            background: var(--accent);
+            background: transparent;
+            color: white;
+            border-color: white;
         }
         
         /* Services Section */
@@ -130,6 +135,7 @@
         .section-title h2 {
             font-size: 2.5rem;
             color: var(--primary);
+            font-family: 'Playfair Display', serif;
         }
         
         .services-grid {
@@ -145,6 +151,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
             transition: transform 0.3s;
+            border-top: 4px solid var(--primary);
         }
         
         .service-card:hover {
@@ -160,6 +167,7 @@
         /* Portfolio Section */
         .portfolio {
             padding: 5rem 0;
+            background-color: #f1f8e9;
         }
         
         .portfolio-grid {
@@ -173,6 +181,7 @@
             overflow: hidden;
             border-radius: 8px;
             height: 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .portfolio-item img {
@@ -191,7 +200,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(107, 142, 35, 0.9);
+            background: rgba(74, 124, 89, 0.9);
             color: white;
             padding: 1rem;
             transform: translateY(100%);
@@ -205,7 +214,7 @@
         /* Testimonials */
         .testimonials {
             padding: 5rem 0;
-            background-color: var(--secondary);
+            background-color: white;
         }
         
         .testimonial-grid {
@@ -215,10 +224,22 @@
         }
         
         .testimonial-card {
-            background: white;
+            background: var(--light);
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: """;
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 10px;
         }
         
         .testimonial-content {
@@ -239,10 +260,24 @@
             object-fit: cover;
         }
         
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+        }
+        
+        .about-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
         /* Contact Section */
         .contact {
             padding: 5rem 0;
-            background-color: var(--light);
+            background-color: var(--primary);
+            color: white;
         }
         
         .contact-container {
@@ -252,12 +287,19 @@
         }
         
         .contact-info h3 {
-            color: var(--primary);
+            color: white;
             margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
         }
         
         .contact-info p {
             margin-bottom: 1rem;
+        }
+        
+        .contact-info i {
+            margin-right: 0.5rem;
+            width: 1.5rem;
+            text-align: center;
         }
         
         .contact-form input,
@@ -267,10 +309,22 @@
             margin-bottom: 1rem;
             border: 1px solid #ddd;
             border-radius: 4px;
+            background: rgba(255,255,255,0.9);
         }
         
         .contact-form textarea {
             height: 150px;
+        }
+        
+        .contact-form .btn {
+            background: white;
+            color: var(--primary);
+            border-color: white;
+        }
+        
+        .contact-form .btn:hover {
+            background: transparent;
+            color: white;
         }
         
         /* Footer */
@@ -289,6 +343,11 @@
             color: white;
             margin: 0 0.5rem;
             font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
         }
         
         /* Responsive */
@@ -309,9 +368,13 @@
             .hero h1 {
                 font-size: 2.2rem;
             }
+            
+            .about-content {
+                padding: 2rem;
+            }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
@@ -334,9 +397,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Elevating Vancouver Homes with Timeless Design</h1>
-            <p>Professional home staging and interior design services tailored to showcase your property's full potential</p>
-            <a href="#portfolio" class="btn">View Our Portfolio</a>
+            <h1>Cultivating Beautiful Outdoor Spaces in Vancouver</h1>
+            <p>Garden design, landscaping, and outdoor living solutions tailored to your space and lifestyle</p>
+            <a href="#contact" class="btn">Schedule a Consultation</a>
         </div>
     </section>
 
@@ -344,30 +407,51 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>Transforming spaces to help you sell faster or live better</p>
+                <h2>Our Garden Services</h2>
+                <p>Transforming outdoor spaces throughout Vancouver</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-seedling"></i>
                     </div>
-                    <h3>Home Staging</h3>
-                    <p>Prepare your property for sale with our professional staging services that highlight your home's best features to potential buyers.</p>
+                    <h3>Garden Design</h3>
+                    <p>Complete garden planning services including plant selection, hardscaping, and sustainable design principles tailored to your microclimate.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-paint-roller"></i>
+                        <i class="fas fa-tree"></i>
                     </div>
-                    <h3>Interior Design</h3>
-                    <p>Create a home you love with our personalized interior design solutions tailored to your style and needs.</p>
+                    <h3>Landscape Installation</h3>
+                    <p>Professional installation of your garden design including planting, irrigation systems, lighting, and custom features.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fas fa-spa"></i>
                     </div>
-                    <h3>Realtor Partnerships</h3>
-                    <p>Special packages for real estate professionals to help their listings stand out in Vancouver's competitive market.</p>
+                    <h3>Garden Maintenance</h3>
+                    <p>Ongoing care programs to keep your garden thriving through Vancouver's seasons, from pruning to soil health.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Edible Gardens</h3>
+                    <p>Design and installation of productive gardens with vegetables, herbs, fruit trees, and berry bushes for homegrown harvests.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Water Features</h3>
+                    <p>Custom ponds, fountains, and water elements that create tranquility and support local ecosystems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Seasonal Refresh</h3>
+                    <p>Transform your outdoor space for special occasions or seasonal changes with container gardens and floral displays.</p>
                 </div>
             </div>
         </div>
@@ -377,29 +461,50 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-title">
-                <h2>Recent Projects</h2>
-                <p>See how we've transformed spaces throughout Vancouver</p>
+                <h2>Garden Portfolio</h2>
+                <p>Explore our recent garden transformations in Vancouver</p>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Modern Condo Staging">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="Modern Garden Design">
                     <div class="portfolio-overlay">
-                        <h3>Yaletown Condo</h3>
-                        <p>Modern staging for downtown luxury condo</p>
+                        <h3>Kitsilano Modern Oasis</h3>
+                        <p>Contemporary garden with native plantings</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Family Home Design">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="Cottage Garden">
                     <div class="portfolio-overlay">
-                        <h3>Kitsilano Family Home</h3>
-                        <p>Warm, inviting design for family residence</p>
+                        <h3>Point Grey Cottage Garden</h3>
+                        <p>Romantic floral abundance with winding paths</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="West Vancouver Luxury">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="Edible Garden">
                     <div class="portfolio-overlay">
-                        <h3>West Vancouver Estate</h3>
-                        <p>High-end staging for luxury property</p>
+                        <h3>East Van Edible Paradise</h3>
+                        <p>Year-round food production garden</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="Japanese Garden">
+                    <div class="portfolio-overlay">
+                        <h3>West End Zen Garden</h3>
+                        <p>Serene Japanese-inspired retreat</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="Drought-Tolerant Garden">
+                    <div class="portfolio-overlay">
+                        <h3>Southlands Xeriscape</h3>
+                        <p>Water-wise garden with Mediterranean plants</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="Family Garden">
+                    <div class="portfolio-overlay">
+                        <h3>Mount Pleasant Family Garden</h3>
+                        <p>Play areas integrated with productive spaces</p>
                     </div>
                 </div>
             </div>
@@ -410,42 +515,43 @@
     <section class="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>What Our Clients Say</h2>
+                <h2>Cultivated Reviews</h2>
+                <p>What our clients say about their garden transformations</p>
             </div>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"Heather's staging transformed our condo completely. We had multiple offers within a week of listing, well above asking price. Her eye for detail is incredible."</p>
+                        <p>"Heather transformed our neglected backyard into a magical retreat. Her plant knowledge is incredible - everything thrives year after year. We spend more time outside now than inside!"</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J.">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Michelle R.">
                         <div>
-                            <h4>Sarah Johnson</h4>
-                            <p>Yaletown Seller</p>
+                            <h4>Michelle Roberts</h4>
+                            <p>Kerrisdale Residence</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"Working with Home & Harvest was a game-changer for my listings. The staged homes sell faster and for more money. Heather understands exactly what buyers want to see."</p>
+                        <p>"The edible garden Heather designed produces more food than our family can eat! Our neighbors love when we share the surplus. The garden is both beautiful and incredibly productive."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T.">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David L.">
                         <div>
-                            <h4>Michael Thompson</h4>
-                            <p>Real Estate Agent</p>
+                            <h4>David Lee</h4>
+                            <p>Commercial Drive Home</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"I was overwhelmed decorating our new home. Heather listened to my style preferences and created a space that feels perfectly 'us' but so much more put together than I could have done alone."</p>
+                        <p>"As a realtor, I recommend Home & Harvest to all my clients preparing to sell. A well-designed garden significantly increases curb appeal and property value in Vancouver's market."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa C.">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah K.">
                         <div>
-                            <h4>Lisa Chen</h4>
-                            <p>Interior Design Client</p>
+                            <h4>Sarah Kim</h4>
+                            <p>Real Estate Professional</p>
                         </div>
                     </div>
                 </div>
@@ -456,16 +562,39 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-title">
-                <h2>About Heather</h2>
-            </div>
             <div class="about-content">
-                <div style="display: flex; align-items: center; gap: 3rem; margin-bottom: 3rem;">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Heather" style="width: 300px; border-radius: 8px;">
-                    <div>
-                        <h3>Creating Beautiful Spaces in Vancouver Since 2015</h3>
-                        <p>Heather brings over a decade of design experience and a passion for creating inviting, functional spaces. Certified through the Canadian Staging Professionals network, she combines market knowledge with design expertise to help clients achieve their goals.</p>
-                        <p>Whether preparing a home for sale or creating your dream living space, Heather's approach focuses on highlighting the unique character of each property while appealing to today's buyers or reflecting your personal style.</p>
+                <div class="section-title" style="text-align: left;">
+                    <h2>Rooted in Vancouver</h2>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 3rem; margin-bottom: 2rem;">
+                    <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Heather gardening" style="width: 300px; border-radius: 8px; object-fit: cover;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3>Heather's Garden Philosophy</h3>
+                        <p>With over 15 years of experience creating beautiful outdoor spaces in Vancouver, Heather combines horticultural expertise with artistic vision. Certified in sustainable landscape practices, she specializes in designs that thrive in our unique Pacific Northwest climate while respecting local ecosystems.</p>
+                        <p>Heather believes gardens should be:</p>
+                        <ul style="columns: 2; list-style-type: none; padding: 0;">
+                            <li><i class="fas fa-leaf" style="color: var(--primary); margin-right: 0.5rem;"></i> Ecologically sound</li>
+                            <li><i class="fas fa-leaf" style="color: var(--primary); margin-right: 0.5rem;"></i> Beautiful in all seasons</li>
+                            <li><i class="fas fa-leaf" style="color: var(--primary); margin-right: 0.5rem;"></i> Functional for your lifestyle</li>
+                            <li><i class="fas fa-leaf" style="color: var(--primary); margin-right: 0.5rem;"></i> Filled with sensory delights</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background: var(--primary); color: white; padding: 2rem; border-radius: 8px;">
+                    <h3 style="color: white; text-align: center;">Why Choose Home & Harvest?</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                        <div>
+                            <h4 style="display: flex; align-items: center;"><i class="fas fa-certificate" style="margin-right: 0.7rem;"></i> Certified Expertise</h4>
+                            <p>Formal training in horticulture and sustainable landscape design</p>
+                        </div>
+                        <div>
+                            <h4 style="display: flex; align-items: center;"><i class="fas fa-map-marker-alt" style="margin-right: 0.7rem;"></i> Local Knowledge</h4>
+                            <p>Deep understanding of Vancouver's microclimates and soil conditions</p>
+                        </div>
+                        <div>
+                            <h4 style="display: flex; align-items: center;"><i class="fas fa-heart" style="margin-right: 0.7rem;"></i> Personalized Service</h4>
+                            <p>Every garden designed for your specific needs and aesthetic</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -476,23 +605,39 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Ready to transform your space? Contact us today</p>
+                <h2>Let's Grow Together</h2>
+                <p>Ready to transform your outdoor space? Contact us today</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Serving Vancouver, BC and surrounding areas</p>
-                    <p><i class="fas fa-phone"></i> (604) 555-1234</p>
-                    <p><i class="fas fa-envelope"></i> hello@homeandharvest.ca</p>
-                    <p><i class="fas fa-clock"></i> Monday-Friday: 9am-5pm</p>
+                    <p><i class="fas fa-phone"></i> (604) 555-GROW</p>
+                    <p><i class="fas fa-envelope"></i> grow@homeandharvest.ca</p>
+                    <p><i class="fas fa-clock"></i> By appointment: Monday-Saturday</p>
+                    
+                    <h3 style="margin-top: 2rem;">Service Areas</h3>
+                    <div style="columns: 2;">
+                        <p><i class="fas fa-check" style="color: var(--secondary);"></i> Vancouver</p>
+                        <p><i class="fas fa-check" style="color: var(--secondary);"></i> Burnaby</p>
+                        <p><i class="fas fa-check" style="color: var(--secondary);"></i> Richmond</p>
+                        <p><i class="fas fa-check" style="color: var(--secondary);"></i> North Shore</p>
+                    </div>
                 </div>
                 <div class="contact-form">
                     <form>
                         <input type="text" placeholder="Your Name" required>
                         <input type="email" placeholder="Your Email" required>
                         <input type="tel" placeholder="Your Phone">
-                        <textarea placeholder="Your Message" required></textarea>
+                        <select style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px; background: rgba(255,255,255,0.9);">
+                            <option value="">I'm interested in...</option>
+                            <option>Garden Design</option>
+                            <option>Landscape Installation</option>
+                            <option>Garden Maintenance</option>
+                            <option>Edible Gardens</option>
+                            <option>Other Inquiry</option>
+                        </select>
+                        <textarea placeholder="Tell us about your garden dreams..." required></textarea>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
                 </div>
@@ -504,11 +649,12 @@
     <footer>
         <div class="container">
             <a href="#" class="logo" style="color: white;">Home & <span style="color: var(--secondary);">Harvest</span></a>
+            <p style="max-width: 600px; margin: 1rem auto;">Creating beautiful, sustainable gardens in Vancouver since 2010</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-pinterest"></i></a>
-                <a href="#"><i class="fab fa-houzz"></i></a>
+                <a href="#"><i class="fab fa-yelp"></i></a>
             </div>
             <p>&copy; 2023 Home & Harvest by Heather. All rights reserved.</p>
         </div>
